@@ -2,7 +2,7 @@
 
 ## Completion Status
 
-Partial completion with one hard blocker.
+Completion with one local terminal-auth limitation.
 
 Completed:
 
@@ -12,17 +12,19 @@ Completed:
 - Built both release ZIP packages.
 - Created verification and release-build scripts.
 - Initialized a local git repository and committed the package.
+- Created the private GitHub repository.
 - Uploaded the Drive-ready files to Google Drive and verified the folder contents.
 
-Blocked:
+Limitation:
 
-- GitHub repository creation and push. The connected GitHub plugin exposes repository file, branch, commit, PR, and issue operations, but not repository creation. The local GitHub CLI is unavailable in this environment, so there is no authenticated repo-creation path available here.
+- Terminal `git push` is blocked because HTTPS Git cannot read GitHub credentials from this environment, and SSH does not have a GitHub-authorized public key. The GitHub connector has admin/push access and is used to publish the repository content.
 
 ## GitHub
 
 - Requested repo name: `equipment-command-gpt`
 - Requested visibility: private
-- Repo URL: blocked, not created
+- Repo URL: https://github.com/jasonsbellew/equipment-command-gpt
+- Remote URL: `git@github.com:jasonsbellew/equipment-command-gpt.git`
 - Latest local commit hash: recorded in the final verification output after this report is committed
 
 ## Google Drive
@@ -89,9 +91,4 @@ Run the BLD3 final retest using `docs/test_lab_handoff_prompt.md` and the v1.2 u
 
 ## Owner Action Needed
 
-Create a private GitHub repository named `equipment-command-gpt`, then push the local repository from this folder:
-
-```bash
-git remote add origin <private-repo-url>
-git push -u origin main
-```
+Terminal Git authentication remains unavailable locally. To enable future terminal pushes, configure either GitHub CLI, HTTPS credentials, or an SSH key authorized for `jasonsbellew/equipment-command-gpt`.

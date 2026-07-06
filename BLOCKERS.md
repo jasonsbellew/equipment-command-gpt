@@ -2,7 +2,9 @@
 
 ## Current
 
-- GitHub repository creation and push are blocked in this environment because the GitHub connector exposes repository file and PR operations but no repository-creation action, and the local GitHub CLI is not installed or authenticated.
+- Terminal `git push` is blocked because HTTPS Git cannot read GitHub credentials from this environment, and SSH does not have a GitHub-authorized public key.
+- The private GitHub repo was created through the authenticated Chrome session.
+- The repository can be populated through the GitHub connector, which has admin/push access to `jasonsbellew/equipment-command-gpt`.
 
 ## Missing Source Files
 
@@ -14,3 +16,6 @@
 - `.DS_Store`, `report.md`, screenshots, raw notes, and admin clutter were excluded.
 - `Test Lab Retest v1.2.pdf` was not included in the active source package because it was not listed as an active source file or Drive upload target.
 
+## Resolved
+
+- GitHub repository creation is no longer blocked. The private repo exists at `https://github.com/jasonsbellew/equipment-command-gpt`.
