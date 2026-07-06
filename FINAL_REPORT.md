@@ -23,7 +23,7 @@ Blocked:
 - Requested repo name: `equipment-command-gpt`
 - Requested visibility: private
 - Repo URL: blocked, not created
-- Latest local commit hash: pending final commit
+- Latest local commit hash: recorded in the final verification output after this report is committed
 
 ## Google Drive
 
@@ -95,4 +95,3 @@ Create a private GitHub repository named `equipment-command-gpt`, then push the 
 git remote add origin <private-repo-url>
 git push -u origin main
 ```
-
