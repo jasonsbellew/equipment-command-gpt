@@ -2,7 +2,7 @@
 
 ## Completion Status
 
-Completion with one local terminal-auth limitation.
+Partial completion with one hard terminal-auth blocker.
 
 Completed:
 
@@ -15,16 +15,18 @@ Completed:
 - Created the private GitHub repository.
 - Uploaded the Drive-ready files to Google Drive and verified the folder contents.
 
-Limitation:
+Blocked:
 
-- Terminal `git push` is blocked because HTTPS Git cannot read GitHub credentials from this environment, and SSH does not have a GitHub-authorized public key. The GitHub connector has admin/push access and is used to publish the repository content.
+- Full terminal `git push` is blocked because HTTPS Git cannot read GitHub credentials from this environment, and SSH has no loaded GitHub-authorized identity.
+- The GitHub connector created an initial `.gitignore` commit in the remote repo, but full repo population through the connector was not completed because the connector does not accept local file paths for bulk file/blob upload.
 
 ## GitHub
 
 - Requested repo name: `equipment-command-gpt`
 - Requested visibility: private
 - Repo URL: https://github.com/jasonsbellew/equipment-command-gpt
-- Remote URL: `git@github.com:jasonsbellew/equipment-command-gpt.git`
+- Remote URL: `https://github.com/jasonsbellew/equipment-command-gpt.git`
+- Remote status: private repo exists; complete local package not pushed due terminal authentication blocker
 - Latest local commit hash: recorded in the final verification output after this report is committed
 
 ## Google Drive
@@ -91,4 +93,8 @@ Run the BLD3 final retest using `docs/test_lab_handoff_prompt.md` and the v1.2 u
 
 ## Owner Action Needed
 
-Terminal Git authentication remains unavailable locally. To enable future terminal pushes, configure either GitHub CLI, HTTPS credentials, or an SSH key authorized for `jasonsbellew/equipment-command-gpt`.
+Configure terminal GitHub authentication, then run:
+
+```bash
+git push -u origin main
+```

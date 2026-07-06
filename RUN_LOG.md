@@ -39,11 +39,13 @@ Date: 2026-07-06
 - SSH terminal push failed because no GitHub-authorized public key was available.
 - Temporary SSH known-hosts was written under the workspace `work/` area rather than changing global SSH configuration.
 
-## Publish Path
+## Publish Attempts After Repo Creation
 
 - The GitHub connector confirmed admin/push access to `jasonsbellew/equipment-command-gpt`.
-- Because terminal Git authentication was unavailable, the repository content will be published through GitHub connector Git data APIs instead of a terminal `git push`.
-- This preserves the repo content but produces a GitHub commit SHA that differs from the local Git commit SHA.
+- The connector successfully created an initial `.gitignore` commit in the remote repository.
+- A full connector-backed tree publish was not completed because the connector blob/tree interface does not accept local file paths, and manually streaming every tracked file plus binary ZIP content through chat would be unreliable and high-risk.
+- Final terminal push remained blocked by missing local GitHub authentication.
+- Final local remote URL: `https://github.com/jasonsbellew/equipment-command-gpt.git`
 
 ## Google Drive
 
@@ -51,3 +53,7 @@ Date: 2026-07-06
   - `https://drive.google.com/drive/folders/1NPcRouwFG3yCVS9rU6n89GLi8DsxpAmy`
 - No duplicate Drive upload was needed.
 
+## Final Blocker
+
+- GitHub repository exists, but the complete local repository was not pushed because no usable terminal GitHub credential or SSH identity is available in this environment.
+- Local fallback remains complete: organized repo, docs, ZIPs, Drive mirror, local commits, Drive upload, blockers, and final report.

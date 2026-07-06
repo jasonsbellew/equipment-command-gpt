@@ -4,7 +4,8 @@
 
 - Terminal `git push` is blocked because HTTPS Git cannot read GitHub credentials from this environment, and SSH does not have a GitHub-authorized public key.
 - The private GitHub repo was created through the authenticated Chrome session.
-- The repository can be populated through the GitHub connector, which has admin/push access to `jasonsbellew/equipment-command-gpt`.
+- The GitHub connector has admin/push access and created an initial `.gitignore` commit, but it cannot practically push the complete local repository because its blob/tree interface does not accept local file paths.
+- Full repo population remains blocked until local GitHub terminal authentication is configured.
 
 ## Missing Source Files
 
@@ -19,3 +20,11 @@
 ## Resolved
 
 - GitHub repository creation is no longer blocked. The private repo exists at `https://github.com/jasonsbellew/equipment-command-gpt`.
+
+## Required Owner Action
+
+- Configure terminal GitHub authentication with one of:
+  - GitHub CLI authentication.
+  - HTTPS Git credentials or credential helper.
+  - SSH key added to the GitHub account.
+- Then run `git push -u origin main` from the local repository.
