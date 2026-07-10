@@ -1,98 +1,40 @@
 # Final Report
 
-## Completion Status
+## Completion status
 
-Complete.
+Closed.
 
-- Located all 13 active Equipment Command source files.
-- Organized the source files into the requested repository structure.
-- Created `README.md`, `LICENSE`, `CHANGELOG.md`, `BLOCKERS.md`, and docs.
-- Built both release ZIP packages.
-- Created verification and release-build scripts.
-- Initialized a local git repository and committed the package.
-- Created the private GitHub repository.
-- Installed and authenticated GitHub CLI locally for terminal Git operations.
-- Merged the remote placeholder history safely.
-- Pushed `main` to GitHub.
-- Uploaded the Drive-ready files to Google Drive and verified the folder contents.
-- Completed the BLD3 v1.2 final retest.
-- Approved the package for public-safe Custom GPT deployment with no blocking defects.
+Equipment Command v1.3 is the active stored package. The Small Equipment Command remediation is complete and requires no additional source work.
+
+## v1.3 remediation
+
+- Small Equipment Command is absorbed as a bounded lane inside Equipment Command.
+- The Source Index classifies the merge report, QA handoff and transfer ZIP as Drive-only administrative artifacts.
+- Full and compressed instructions contain explicit small-equipment triggers and safety limits.
+- Risk Boundaries permit non-invasive, shutdown-and-secured operator-level triage while prohibiting invasive or hazardous repair procedures.
+- The 13-file runtime source structure remains intact.
+
+## Validation
+
+- Narrow remediation retest: Pass.
+- Repository verification script: Pass.
+- Patch integrity check: Pass.
+- Blocking defects: None.
+- Recommendation: Approved for normal use and refreshed public-safe deployment.
 
 ## GitHub
 
-- Requested repo name: `equipment-command-gpt`
-- Requested visibility: private
-- Repo URL: https://github.com/jasonsbellew/equipment-command-gpt
-- Remote URL: `https://github.com/jasonsbellew/equipment-command-gpt.git`
-- Remote status: private repo exists and `main` is pushed
-- Latest commit hash: see final verification output, because this file changes the commit hash when updated.
+- Repository: https://github.com/jasonsbellew/equipment-command-gpt
+- Remediation PR: https://github.com/jasonsbellew/equipment-command-gpt/pull/1
+- Merge commit: `25e93facd0d71e79b7d76efd30f9629200218051`
+- Active branch: `main`
 
 ## Google Drive
 
-- Folder: https://drive.google.com/drive/folders/1NPcRouwFG3yCVS9rU6n89GLi8DsxpAmy
-- Parent folder: https://drive.google.com/drive/folders/1jDceY-fU9rt9L0E__SwGOd54ddD3yuTC
-- Upload status: complete and verified
+- Active v1.3 package: https://drive.google.com/drive/folders/1iY2-VyYX2qjQhhkEPtcKjZWyQ2DNgelc
+- Archived v1.2 rollback package: https://drive.google.com/drive/folders/1NPcRouwFG3yCVS9rU6n89GLi8DsxpAmy
+- Drive-only remediation evidence is isolated under `99_Drive_Only_Admin` inside the v1.3 package.
 
-## Files Committed
+## Owner action needed
 
-- `README.md`
-- `LICENSE`
-- `CHANGELOG.md`
-- `BLOCKERS.md`
-- `FINAL_REPORT.md`
-- `docs/upload_order.md`
-- `docs/test_lab_handoff_prompt.md`
-- `docs/public_safe_notes.md`
-- `docs/release_notes_v1_2.md`
-- `docs/bld3_final_retest_report_v1_2.md`
-- `sources/01_authority/EQCMD_OS_00_Source_Index_Authority_Map.md`
-- `sources/02_charter/EQCMD_CHR_01_Project_Charter.md`
-- `sources/03_instructions/EQCMD_INST_01_Full_Instructions.md`
-- `sources/03_instructions/EQCMD_INST_02_Compressed_Instructions.md`
-- `sources/04_operating_manual/EQCMD_OS_01_Operating_Manual.md`
-- `sources/05_knowledge_base/EQCMD_KB_01_Core_Equipment_Decision_Framework.md`
-- `sources/05_knowledge_base/EQCMD_KB_02_Risk_Boundaries.md`
-- `sources/05_knowledge_base/EQCMD_KB_03_Economic_Engines.md`
-- `sources/05_knowledge_base/EQCMD_KB_04_Fleet_Management_Extension.md`
-- `sources/06_workflows/EQCMD_WF_01_Primary_Workflows.md`
-- `sources/07_prompts/EQCMD_PRM_01_Prompt_Library.md`
-- `sources/08_outputs/EQCMD_OUT_01_Output_Templates.md`
-- `sources/09_qa/EQCMD_QA_01_Test_Checklist.md`
-- `releases/EQCMD_full_active_source_package_v1_2_2026-07-06.zip`
-- `releases/EQCMD_minor_patch_v1_2_files.zip`
-- `scripts/verify_files.sh`
-- `scripts/build_release_zip.sh`
-
-## Release ZIPs
-
-- `releases/EQCMD_full_active_source_package_v1_2_2026-07-06.zip`
-- `releases/EQCMD_minor_patch_v1_2_files.zip`
-
-## Google Drive Upload Set
-
-- Full active source package ZIP.
-- Minor patch ZIP.
-- All 13 individual active source files.
-- `README.md`
-- `upload_order.md`
-- `test_lab_handoff_prompt.md`
-- `release_notes_v1_2.md`
-
-## Missing Files
-
-- None.
-
-## Public-Safe Confirmation
-
-The package includes only the active public-safe source files, generated repository docs, release ZIPs, and release scripts. Archive files, `.DS_Store`, raw notes, report clutter, and unrelated Builder Zone/admin files were excluded.
-
-## BLD3 Final Retest
-
-- Result: Pass, 97/100.
-- Blocking defects: None.
-- Recommendation: Approved for public-safe Custom GPT deployment.
-- Report: `docs/bld3_final_retest_report_v1_2.md`
-
-## Owner Action Needed
-
-None for repository packaging, upload, or Test Lab approval.
+None. This remediation is closed.
