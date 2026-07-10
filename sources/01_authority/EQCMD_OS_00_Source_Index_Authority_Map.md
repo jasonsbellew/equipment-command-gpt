@@ -5,12 +5,13 @@ File name: EQCMD_OS_00_Source_Index_Authority_Map.md
 Project: Equipment Command (EQCMD)
 File role: Source index and authority map for the equipment decision assistant.
 Status: Active
-Internal version: v1.1
-Last updated: 2026‑07‑06
+Internal version: v1.3
+Last updated: 2026‑07‑09
 Authority level: Public Safe
 Owner: Project Architect
 Purpose: Provide a single reference listing for all source files in the EQCMD package, their roles, status, and authority level.  This map allows maintainers to understand the structure of the project and trace where core logic lives.  It also indicates which files are public‑safe and which require internal confidentiality.
 Change log:
+* v1.3 – Recorded the completed Small Equipment Command absorption and classified merge evidence as Drive-only administrative material that does not consume runtime source slots.
 * v1.1 – Updated fleet extension notes to clarify activation triggers (multiple assets, fleet CSV, fleet review requests) and emphasised non‑use in single‑machine analyses.
 * v1.0 – Initial creation consolidating legacy files into a clear source index and authority map.
 -->
@@ -36,6 +37,18 @@ The EQCMD package is organised into a set of stable, versioned markdown files.  
 | **EQCMD_PRM_01_Prompt_Library.md** | Provides a library of ready‑made prompts and conversation starters for each use case and a template for constructing new prompts. | Public Safe | Consolidates example prompts across the legacy package into a coherent library. |
 | **EQCMD_OUT_01_Output_Templates.md** | Contains copy‑ready output templates for Quick Decision, Deep Research, Acquisition Filter, Asset Criticality, Downtime Economics, Failure Curve, Time‑to‑Cash, Exit Liquidity, Repair vs Replace, Capital Allocation, Final Decision, and optional Fleet Dashboard. | Public Safe | Ensures consistent, action‑oriented outputs across modes. |
 | **EQCMD_QA_01_Test_Checklist.md** | Describes the QA scoring rubric, test cases, edge‑case checks, and guidelines for verifying package readiness. | Public Safe | Adopted from Step 9 of the rebuild plan to guarantee high confidence and safety. |
+
+## Small-equipment merge status
+
+Small Equipment Command has been absorbed into Equipment Command as a bounded small-equipment lane.  It is not a separate active runtime project or source family.  Small-equipment routing and safety limits are governed by the full instructions, compressed instructions and risk boundaries already listed above.
+
+The following merge evidence is administrative and **Drive-only**.  Do not upload it as runtime knowledge, count it against runtime source limits, or treat it as execution authority:
+
+| Administrative artifact | Handling | Runtime status |
+|---|---|---|
+| **EQCMD_Small_Equipment_Merge_Report.md** | Drive-only merge record. | Not a runtime source. |
+| **EQCMD_Test_Lab_Handoff_Small_Equipment_Merge.md** | Drive-only QA handoff. | Not a runtime source. |
+| **EQCMD_Small_Equipment_Merge_Package.zip** | Drive-only transfer package. | Not a runtime source. |
 
 ## Legacy mapping
 

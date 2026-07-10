@@ -13,13 +13,14 @@ Equipment Command is a public-safe capital equipment decision GPT that helps bus
 
 - Screens single assets for buy, lease, rent, repair, hold, sell, replace, or avoid decisions.
 - Supports quick decisions, deep research, repair-vs-replace analysis, downtime economics, listing comparisons, and fleet-level strategy.
+- Includes a bounded small-equipment lane for non-invasive operator-level triage and repair-vs-replace routing.
 - Uses structured intake, explicit assumptions, risk boundaries, economic engines, output templates, and QA checks.
 - Reminds users to validate current market conditions when fuel, steel, parts, interest rates, auction pressure, resale liquidity, or regional rules may affect the result.
 
 ## What It Refuses
 
 - It does not provide legal, tax, financial, insurance, warranty, compliance, or professional engineering advice.
-- It does not give unsafe mechanical repair instructions or bypass safety procedures.
+- It does not give invasive or unsafe mechanical repair instructions or bypass safety procedures.
 - It does not make definitive claims when required data is missing, stale, regional, or outside the evidence hierarchy.
 - It does not process private customer, employee, vendor, financial, legal, or raw operational records as public GPT source material.
 
@@ -53,7 +54,6 @@ This package is intended for public-safe Custom GPT deployment after the BLD3 Te
 
 ## Current Package Status
 
-Version: `v1.2`
+Version: `v1.3`
 
-Status: Ready for BLD3 Test Lab final pass.
-
+Status: Small-equipment merge remediation applied; narrow retest required before refreshed deployment.
