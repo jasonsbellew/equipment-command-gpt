@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.3 - 2026-07-09
+
+- Recorded the completed Small Equipment Command absorption as an Equipment Command lane.
+- Added bounded non-invasive operator-level small-equipment triage.
+- Added explicit safety stop conditions and technician redirects.
+- Classified merge reports, handoff notes and transfer package as Drive-only administrative artifacts rather than runtime sources.
+
 ## v1.2 - 2026-07-06
 
 - Added regional caveat fields in Quick Decision and Deep Research summaries.
@@ -20,4 +27,3 @@
 
 - Initial rebuild of the Equipment Command source package.
 - Consolidated charter, instructions, operating manual, knowledge bases, workflows, prompt library, output templates, and QA checklist.
-
