@@ -1,59 +1,50 @@
 # Equipment Command GPT
 
-Equipment Command is a public-safe capital equipment decision GPT that helps business equipment users decide whether to buy, lease, rent, repair, hold, sell, replace, or avoid equipment.
+**Status:** Pre-launch tested  
+**Version:** `v1.3`  
+**Website:** [Service Business Command](https://servicebusinesscommand.com/gpts/equipment-command?utm_source=github&utm_medium=repository&utm_campaign=public_beta&utm_content=equipment_command_readme)
 
-## Target Users
+Equipment Command is a public-safe capital-equipment decision system. It helps operators structure buy, lease, rent, repair, hold, sell, replace, or avoid decisions without replacing professional mechanical, legal, tax, financing, safety, insurance, or engineering advice.
+
+## Who it is for
 
 - Owners and operators evaluating equipment purchases.
 - Fleet managers comparing repair, replacement, rental, and resale options.
-- Contractors, farms, shops, logistics operators, and small businesses that rely on capital equipment.
-- Advisors helping users structure equipment decisions without replacing professional legal, tax, safety, financing, or mechanical judgment.
+- Contractors, farms, shops, logistics operators, and small businesses that depend on capital equipment.
+- Advisors helping users structure equipment decisions.
 
-## What It Does
+## Main capabilities
 
-- Screens single assets for buy, lease, rent, repair, hold, sell, replace, or avoid decisions.
-- Supports quick decisions, deep research, repair-vs-replace analysis, downtime economics, listing comparisons, and fleet-level strategy.
-- Includes a bounded small-equipment lane for non-invasive operator-level triage and repair-vs-replace routing.
-- Uses structured intake, explicit assumptions, risk boundaries, economic engines, output templates, and QA checks.
-- Reminds users to validate current market conditions when fuel, steel, parts, interest rates, auction pressure, resale liquidity, or regional rules may affect the result.
+- Single-asset purchase and disposition screening.
+- Buy-versus-rent and lease comparisons.
+- Repair-versus-replace and downtime economics.
+- Listing comparisons and structured assumptions.
+- A bounded small-equipment triage lane.
+- An optional fleet extension for multi-asset decisions.
+- Risk boundaries, output templates, and QA checks.
 
-## What It Refuses
+## How to explore it
 
-- It does not provide legal, tax, financial, insurance, warranty, compliance, or professional engineering advice.
-- It does not give invasive or unsafe mechanical repair instructions or bypass safety procedures.
-- It does not make definitive claims when required data is missing, stale, regional, or outside the evidence hierarchy.
-- It does not process private customer, employee, vendor, financial, legal, or raw operational records as public GPT source material.
+1. Review the active source files in this repository.
+2. Follow [docs/upload_order.md](./docs/upload_order.md) for the public knowledge upload sequence.
+3. Activate the optional fleet extension only for multi-asset or fleet-level work.
+4. Validate current market, financing, parts, fuel, resale, and regional information before relying on a decision.
 
-## Active Source Files
+## Current status
 
-1. `EQCMD_OS_00_Source_Index_Authority_Map.md`
-2. `EQCMD_CHR_01_Project_Charter.md`
-3. `EQCMD_INST_01_Full_Instructions.md`
-4. `EQCMD_INST_02_Compressed_Instructions.md`
-5. `EQCMD_OS_01_Operating_Manual.md`
-6. `EQCMD_KB_01_Core_Equipment_Decision_Framework.md`
-7. `EQCMD_KB_02_Risk_Boundaries.md`
-8. `EQCMD_KB_03_Economic_Engines.md`
-9. `EQCMD_WF_01_Primary_Workflows.md`
-10. `EQCMD_PRM_01_Prompt_Library.md`
-11. `EQCMD_OUT_01_Output_Templates.md`
-12. `EQCMD_QA_01_Test_Checklist.md`
-13. `EQCMD_KB_04_Fleet_Management_Extension.md`
+Version `v1.3` includes small-equipment merge remediation. Its narrow retest passed and the package was approved for refreshed public-safe deployment. It should not be described as standalone production software.
 
-## Upload Order
+## Roadmap
 
-Use the upload order in `docs/upload_order.md`. The optional fleet extension should be uploaded last and activated only for users working with multiple assets, fleet CSVs, fleet dashboards, or fleet-level strategy.
+- Continue behavioral QA and public-safe deployment checks.
+- Expand decision examples without adding private operational data.
+- Improve fleet-level workflows and structured comparison outputs.
+- Align future API and integration work with the Service Business Command roadmap.
 
-## Optional Fleet Extension
+## Safety and privacy
 
-`EQCMD_KB_04_Fleet_Management_Extension.md` is public-safe but optional. Do not activate it for ordinary single-machine decisions unless the user asks for fleet-level analysis or provides multiple assets.
+Do not add private customer, employee, vendor, financial, legal, insurance, warranty, or raw operational records to the public source package.
 
-## Public-Safe Status
+## License
 
-This package is intended for public-safe Custom GPT deployment after the BLD3 Test Lab final pass. It should not include private business data, customer records, employee records, vendor records, raw financial records, legal records, screenshots, admin clutter, or unsanitized Builder Zone notes.
-
-## Current Package Status
-
-Version: `v1.3`
-
-Status: Small-equipment merge remediation applied; narrow retest passed and approved for refreshed public-safe deployment.
+No open-source license is currently included. Unless a license is added, normal copyright restrictions apply.
